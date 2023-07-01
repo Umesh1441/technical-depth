@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #eee;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebaractive {
+    transform: translate(0%) !important;
+}
+
+.sidebar {
+    height: 9cm;
+    z-index: 3;
+    position: fixed;
+    top: 9.5%;
+    display: block;
+    transform: translate(-100%);
+    transition: all 0.3s linear 0s;
+    ;
+}
+
+.nav-header {
+    height: 700px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.closebtn {
+    position: absolute;
+    right: 15px;
+    font-size: 30px;
+    top: 0px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 3rd asset css */
+#asset_container3 {
+    transition: height 1s;
+    margin-left: .5cm;
+    margin-right: .5cm;
+    margin-top: 1.5cm;
+    height: 480px;
+    width: 480px;
+    border-radius: 15px;
+    background: #FDFDFD;
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.asset_container_in_upper3 {
+    width: 481px;
+    display: flex;
+    height: 50px;
+    background-color: #000;
+    border-radius: 15px 15px 0px 0px;
+}
+
+#asset_container_in_mid3 {
+    transition: height 1s;
+    height: 0px;
+}
+
+.asset_container_in_lower3 {
+    width: 480px;
+    position: absolute;
+    border-radius: 0px 0px 20px 20px;
+    height: 400px;
+    overflow-y: scroll;
+    background: whitesmoke;
+    align-items: center;
+    padding: 10px;
+}
+
+.input_3 {
+    border: none;
+    width: 98%;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #FCFBFB;
+    box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    height: 1cm;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 4px 10px;
+    text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+
+    border-radius: 5px;
+    background-color: rgb(128, 186, 232);
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.comment_box {
+    margin-top: -12px;
+    width: 422px;
+    height: 242px;
+    flex-shrink: 0;
+    background: #FCFBFB;
+    box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.15);
+}
+.comment_box_lower_part{
+    margin-top: 2px;
+    width: 422px;
+    height: 28px;
+    flex-shrink: 0;
+    background: #FCFBFB;
+    box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.15);
+}
+#asset_container4 {
+    transition: height 1s;
+    margin-left: .5cm;
+    margin-right: .5cm;
+    margin-top: 1.5cm;
+    height: 480px;
+    width: 480px;
+    border-radius: 15px;
+    background: #FCFBFB;
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.asset_container_in_upper4 {
+    width: 481px;
+    display: flex;
+    height: 50px;
+    background-color: #000;
+    border-radius: 15px 15px 0px 0px;
+}
+
+#asset_container_in_mid4 {
+    transition: height 1s;
+    height: 0px;
+}
+
+.asset_container_in_lower4 {
+    width: 480px;
+    position: absolute;
+    border-radius: 0px 0px 20px 20px;
+    height: 400px;
+    overflow-y: scroll;
+    background: whitesmoke;
+    align-items: center;
+    padding: 10px;
+}
+#hide_thread4_lower{
+    transition: height .5s;
+    margin-top: 10px;
+    height: 100px;
+    width: 90%;
+    margin-left: 25px;
+}
+#hide_thread4_lower_2{
+    transition: height .5s;
+    margin-top: 10px;
+    height: 100px;
+    width: 90%;
+    margin-left: 25px;
+}

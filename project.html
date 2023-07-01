@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DT project</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            margin: inherit;
+        }
+
+        .logo-img {
+            height: 1.3cm;
+        }
+
+        .icon4 {
+            margin-right: 10px;
+            width: 23px;
+            height: 24px;
+            margin-left: 5px;
+            margin-bottom: 8px;
+        }
+
+        .icon3 {
+            margin-right: 10px;
+            margin-top: 6.3px;
+            margin-left: 15px;
+            width: 35px;
+            height: 29px;
+        }
+
+        .icon2 {
+            margin-right: 10px;
+            margin-bottom: 3px;
+            width: 29px;
+            height: 34.5px;
+            margin: 5px;
+        }
+
+        .icon1 {
+            margin-right: 10px;
+            margin-top: 7px;
+            margin: 5px;
+            padding-left: 6px;
+            letter-spacing: 0.3px;
+            font-size: 17px;
+            background-color: #3683F0;
+            border-radius: 20px;
+            display: flex;
+            width: 26px;
+            height: 33.5px;
+            align-items: center;
+        }
+
+        .navbar {
+            z-index: 2;
+            background-color: whitesmoke;
+            position: sticky;
+            top: 0%;
+            margin: none;
+            display: flex;
+            /* justify-content: space-between; */
+            padding: 10px;
+            box-shadow: 0px 5px 5px rgb(203, 207, 207);
+        }
+
+        .navbarin {
+            margin-left: 3.6cm;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .website-name {
+            color: blue;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .home-icon {
+            margin-right: 10px;
+        }
+
+        .navbar-icons {
+            display: flex;
+            align-items: center;
+            margin-left: 19.1cm;
+        }
+
+        .icon {
+            margin-right: 150px;
+        }
+
+        .sidebar1upper {
+            z-index: 3;
+            border-radius: 0px 20px 0px 0px;
+            background: #000;
+            width: 132px;
+            height: 50px;
+            flex-shrink: 0;
+        }
+
+        .sidebar1lower {
+            width: 132px;
+            height: 588px;
+            flex-shrink: 0;
+            border-radius: 0px 0px 10px 0px;
+            background: #FDFDFD;
+            box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, .25);
+        }
+
+        .sidebar1 {
+            height: 700px;
+            position: fixed;
+        }
+
+        .sidearrowleftside {
+            background-color: white;
+            border-radius: 15px;
+            margin-right: 8px;
+            height: 26px;
+            margin-left: 2.1cm;
+            margin-top: 11px;
+        }
+
+        .sidebar1uppernext {
+            border-radius: 0px 10px 0px 0px;
+            background: #000;
+            width: 392px;
+            height: 50px;
+            flex-shrink: 0;
+        }
+
+        .sidebar1lowernext {
+            width: 392px;
+            height: 588px;
+            flex-shrink: 0;
+            border-radius: 0px 0px 10px 0px;
+            background: #FDFDFD;
+            box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, .25);
+        }
+
+        .sidearrowleftsidenext {
+            cursor: pointer;
+            background-color: white;
+            border-radius: 15px;
+            margin-right: 8px;
+            height: 26px;
+            margin-left: 9.4cm;
+            margin-top: 11px;
+        }
+
+        .content_middle {
+
+            margin-left: 5.4cm;
+            display: block;
+            width: 73%;
+        }
+
+        .main_content_2 {
+            margin-top: 20px;
+            background-color: #dbdfe4;
+            border-radius: 10px;
+            padding-left: 10px;
+            padding-top: 1px;
+            padding-bottom: 5px;
+
+        }
+
+        .notice_board_1 {
+            position: sticky;
+            right: 10%;
+            color: white;
+            width: 394px;
+            height: 50px;
+            transform: rotate(90deg);
+            flex-shrink: 0;
+            border-radius: 0px 0px 30px 30px;
+            background: #000;
+        }
+
+        #notice_board_2 {
+            /* transform: translate(-100%);
+            transition: all 0.3s linear 0s; */
+            transition: width .5s;
+            transition: margin-left .5s;
+            position: fixed;
+            top: 90px;
+            margin-left: 167px;
+            width: 0px;
+            height: 315px;
+            flex-shrink: 0;
+            border-radius: 30px 0px 0px 30px;
+            background: #FFF;
+            box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .notice_board_in {
+            position: sticky;
+            top: 90px;
+            /* margin-left: 172px; */
+            width: 80px;
+            height: 315px;
+            flex-shrink: 0;
+            border-radius: 30px 0px 0px 30px;
+            background: #FFF;
+            box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            background-color: #000;
+            width: 40px;
+            height: 315px;
+            border-radius: 20px 0px 0px 20px;
+        }
+
+        .notice_board {
+            display: grid;
+        }
+
+        .lower_icon {
+            margin-top: 10cm;
+            position: fixed;
+            margin-left: 3.7cm;
+            display: grid;
+            height: 5cm;
+        }
+
+        .lower_icon_ {
+            background-color: blue;
+            width: 1.2cm;
+            padding: 5px;
+            height: 1.2cm;
+            border-radius: 30px;
+
+        }
+
+        .imgicon {
+            margin-top: 5px;
+            margin-left: 7px;
+            width: .8cm;
+            height: .8cm;
+
+        }
+
+        .notice_words {
+            margin-top: -4px;
+            margin-left: -.3cm;
+            width: 1cm;
+            color: white;
+            writing-mode: vertical-rl;
+            font: 14px serif;
+            text-combine-upright: all;
+
+        }
+
+        #cross_icon {
+            cursor: pointer;
+        }
+
+        .drpodown_thred {
+            display: flex;
+            margin-left: 6cm;
+            margin-top: 30px;
+        }
+
+        .notice_board_in_ {
+            position: sticky;
+            top: 90px;
+            margin-left: 201px;
+            width: 80px;
+            height: 315px;
+            flex-shrink: 0;
+            border-radius: 30px 0px 0px 30px;
+            background: #FFF;
+            box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            background-color: #000;
+            width: 40px;
+            height: 315px;
+            border-radius: 20px 0px 0px 20px;
+        }
+
+        #asset_container {
+            transition: height 1s;
+            margin-left: .5cm;
+            margin-right: .5cm;
+            margin-top: 1.5cm;
+            height: 480px;
+            width: 480px;
+            border-radius: 15px;
+            background: #FDFDFD;
+            box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        }
+
+        #asset_container2 {
+            transition: height 1s;
+            margin-left: .5cm;
+            margin-right: .5cm;
+            margin-top: 1.5cm;
+            height: 480px;
+            width: 480px;
+            border-radius: 15px;
+            background: #FDFDFD;
+            box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        }
+
+        .asset_container_in_upper {
+            width: 481px;
+            display: flex;
+            height: 50px;
+            background-color: #000;
+            border-radius: 15px 15px 0px 0px;
+
+
+        }
+
+        .asset_container_in_lower2 {
+            position: absolute;
+            border-radius: 0px 0px 20px 20px;
+            height: 400px;
+            overflow-y: scroll;
+            background: whitesmoke;
+            align-items: center;
+            padding: 10px;
+        }
+
+        #asset_container_in_mid {
+            transition: height 1s;
+            height: 0px;
+        }
+
+        .wrap_asset_container {
+            display: flex;
+            padding: 1cm;
+        }
+
+        #asset_container_in_mid2 {
+            transition: height 1s;
+            height: 0px;
+        }
+
+        .downmoutharrow {
+            background-color: #dbdfe4;
+            padding: 20px;
+        }
+
+        .sub_thred1 {
+            margin-top: 3px;
+            width: 199px;
+            height: 120px;
+            border-radius: 20px;
+            background-color: whitesmoke;
+
+            /* padding: 5px; */
+            box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        }
+
+        .two_input_box {
+            margin-top: 20px;
+            display: flex;
+            padding: 10px;
+        }
+
+        #hide_thread {
+            transition: height .5s;
+            overflow: hidden;
+            height: 400px;
+
+        }
+        .Description_css{
+            padding: 33px;
+    font-size: 18px;
+
+        }
+    </style>
+    <!-- <link href="one.css"> -->
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbarin">
+            <div class="navbar-logo">
+                <span>
+                    <img class="logo-img"
+                        src="https://sdlms.deepthought.education/assets/uploads/files/system/site-logo.svg">
+                </span>
+            </div>
+            <div class="navbar-icons">
+                <i class="icon1"><img src="home.png"></i>
+                <span class="icon1"><img src="tools.png"></span>
+                <span class="icon2"><img src="Vector.png"></span>
+                <span class="icon4"><img src="women.png"></span>
+                <span><img src="dot.png" class="icon3"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main containt div -->
+    <div style="display: flex;">
+        <!-- left side bar content -->
+        <div class="sidebar1 nav-header">
+            <div class="sidebar1upper">
+                <i class="fa fa-bars"><img class="sidearrowleftside" src="right-arrow.png"></i>
+            </div>
+            <div class="sidebar1lower"></div>
+        </div>
+
+        <!-- slide bar of left side -->
+        <div class="sidebar ">
+            <div class="sidebar1uppernext">
+                <img class="sidearrowleftsidenext" src="arrow.png">
+            </div>
+            <div class="sidebar1lowernext" style="height: 596px;">
+                <li style=" margin-left: 1cm; margin-top: 20px; margin-bottom: 10px;">
+                    <b>Explore the world of management</b>
+                </li>
+                <li style=" margin-left: 69px;">Technical Project Management</li>
+                <li style=" margin-left: 69px;">Threadbuild</li>
+                <li style=" margin-left: 69px;">Structure you pointers</li>
+                <li style=" margin-left: 69px;">4SA Method</li>
+            </div>
+        </div>
+
+
+        <!-- middle containt -->
+        <div class="content_middle">
+            <!-- heading of middle content -->
+            <div style="display: flex;">
+                <h2 style="color: blue; "><b>Technical Project Management</b></h2>
+                <button
+                    style="color: white; background-color: blue; border-radius: 10px; margin-left: 15.2cm; height: .8cm; margin-top: 10px; border: none; font-size:x-small;padding: 10px;">Submit
+                    Task</button>
+            </div>
+            <!-- div box conatin some info -->
+            <div class="main_content_2">
+                <h3><b>Explore the world of management</b></h3>
+                <p>As a project manager, you play an important role in leading a project through initiation, planning,
+                    execution, monitoring, controlling and completion. How? Do you want to manage each and every step of
+                    your life?</p>
+            </div>
+            <!-- asset containter in pair -->
+            <!-- 1st asset paiar -->
+            <div class="wrap_asset_container">
+                <!-- 1st asset -->
+                <div id="asset_container">
+                    <div class="asset_container_in_upper">
+                        <div style="color: white; font-size: .5cm; margin-top: 10px; margin-left: 2cm;"><b>Tecnical
+                                project
+                                management</b></div>
+                        <i onclick="showinfo()"><img style="width: 1cm; margin-left: 3px; background-color: white;cursor: pointer; border-radius: 20px; padding: 3px; width: .5cm; margin-top: 11px; margin-left: 1.5cm;"src="info.png"></i>
+                    </div>
+                    <div id="asset_container_in_mid" style="height: 5px;">
+                        <h3 class="Description_css"> <b>Description:</b> Story of Alignment Scope of Agility Specific Accountable Staggering
+                            Approach
+                        </h3>
+                    </div>
+                    <div class="asset_container_in_lower">
+                        <img style="width: 480px; margin-top: 0px;" src="photo.png">
+                    </div>
+                </div>
+                <!-- 2nd asset -->
+                <div id="asset_container2">
+                    <div class="asset_container_in_upper">
+                        <div
+                            style="color: white; font-size: .5cm; margin-top: 10px; margin-left: 5cm;margin-right: 1.2cm;">
+                            <b>Threadbuild</b>
+                        </div>
+                        <i onclick="showinfo2()"><img
+                                style="width: 1cm; margin-left: 3px; background-color: white;cursor: pointer; border-radius: 20px; padding: 3px; width: .5cm; margin-top: 11px; margin-left: 1.5cm;"
+                                src="info.png"></i>
+                    </div>
+                    <div id="asset_container_in_mid2">
+                        <h3 class="Description_css"> <b>Description:</b>Watch the video and thread build, and jot out key threads while watching that video.
+
+                        </h3>
+                    </div>
+                    <div class="asset_container_in_lower2">
+
+                        <div class="downmoutharrow"> <i><img onclick="hide_thread()"
+                                    style="margin-right: 15Spx; cursor: pointer;" src="down.svg"></i>Thread
+                        </div>
+                        <div id="hide_thread">
+                            <div id="board">
+                                <div class="two_input_box">
+                                    <div class="sub_thred1">
+                                        <h3 style="margin-top: 20px; margin-left: 20px;">Sub Thread 1</h3>
+                                        <div><input placeholder="Enter the text" type="text" style="height: 80px;border: none; width: 199px;margin-bottom: 2px; align-items: center;background-color: whitesmoke;border-radius: 20px;box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                "></div>
+                                    </div>
+                                    <div class="sub_thred1" style="margin-left: 20px;">
+                                        <h3 style="margin-top: 20px; margin-left: 20px;">Sub Thread 1</h3>
+                                        <div><input placeholder="Enter the text" type="text" style="height: 80px;border: none; width: 199px;margin-bottom: 2px; align-items: center;background-color: whitesmoke;border-radius: 20px;box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                "></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="drpodown_thred">
+                                <div class="dropdown-center">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown"
+                                        style="width: 2cm; background-color:whitesmoke;box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                        color: black; border: none; font-size: 10px;padding: 0px;height: 25px; margin-left: 17px;"
+                                        aria-expanded="false">
+                                        Remark
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Action two</a></li>
+                                        <li><a class="dropdown-item" href="#">Action three</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-center">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown"
+                                        style="width: 2cm;background-color: whitesmoke;box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                                   color: black; border: none; font-size: 10px;padding: 0px;height: 25px; margin-left: 17px;  "
+                                        aria-expanded="false">
+                                        Select Process
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Action two</a></li>
+                                        <li><a class="dropdown-item" href="#">Action three</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                <button onclick="make_more_div()"
+                                    style="background-color: blue;color: white; font-size: 15px;width: 3.2cm; height: 30px; margin-left: 20px;cursor:pointer; border: none;border-radius: 15px; padding: 0px;"><b>+</b>
+                                    Sub thread</button>
+                            </div>
+                            <div>
+                                <div class="sub_thred1" style="width: 415px; margin-left: 10px;">
+                                    <h3 style="margin-top: 20px; margin-left: 20px; width: 420px; font-size: 20px;">
+                                        Summary of Thread A</h3>
+                                    <div><input placeholder="Enter the text" type="text" style="height: 80px; border: none; margin-top: 7px; width: 415px;margin-bottom: 2px; align-items: center;background-color: whitesmoke;border-radius: 20px;box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                                "></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- 2nd asset pair -->
+            <div class="wrap_asset_container">
+                <!-- 1st asset -->
+                <div id="asset_container3">
+                    <div class="asset_container_in_upper3">
+                        <div
+                            style="color: white; font-size: .5cm; margin-top: 10px; margin-left: 3.6cm;margin-right: 10px;">
+                            <b>Structure you Pointer</b>
+                        </div>
+                        <i onclick="showinfo3()"><img
+                                style="width: 1cm; margin-left: 3px; background-color: white;cursor: pointer; border-radius: 20px; padding: 3px; width: .5cm; margin-top: 11px; margin-left: 1.5cm;"
+                                src="info.png"></i>
+                    </div>
+                    <div id="asset_container_in_mid3">
+                        <h3 class="Description_css"> <b>Description:</b>Write a 400-500 word article, from your thread. Publish your understanding, and showcase your learning to the entire world.
+
+                        </h3>
+                    </div>
+                    <div class="asset_container_in_lower3">
+                        <div style="margin-left: 12px;">
+                            <h3 style="font-size: 17px;">Title </h3>
+                            <input class="input_3" type="text">
+                            <h3 style="font-size: 17px; margin-top: 10px;">Comment </h3>
+                            <div style="width: 98%;">
+                                <ul>
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#news">News</a></li>
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#news">News</a></li>
+                                    <li class="dropdown">
+                                        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                                        <div class="dropdown-content">
+                                            <a href="#">Link 1</a>
+                                            <a href="#">Link 2</a>
+                                            <a href="#">Link 3</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="comment_box"></div>
+                                <div class="comment_box_lower_part">0 words</div>
+                                <div style="display: flex;">
+                                    <h3 style="font-size: 17px; margin-top: 20px;">Category </h3>
+                                    <h3 style="font-size: 17px; margin-top: 20px; margin-left: 3.6cm;">Sub Category
+                                    </h3>
+                                </div>
+
+                                <div>
+                                    <div class="btn-group dropend"
+                                        style="margin-top: 8px; background: #FCFBFB; box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.15);">
+                                        <button type="button" class="btn btn-secondary"
+                                            style="background-color: whitesmoke; color: black; border: none;">
+                                            --Select--
+                                        </button>
+                                        <button type="button"
+                                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                                            style="background-color: whitesmoke; border: none;"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden"
+                                                style="color: #000; background-color: #000;">Toggle
+                                                Dropend</span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><button class="dropdown-item" type="button">Action</button></li>
+                                            <li><button class="dropdown-item" type="button">Another action</button></li>
+                                            <li><button class="dropdown-item" type="button">Something else here</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group dropend"
+                                        style="margin-left: 2.4cm; margin-top: 8px; background: #FCFBFB;box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.15);">
+                                        <button type="button" class="btn btn-secondary"
+                                            style="background-color: whitesmoke; color: black; border: none;">
+                                            --Select--
+                                        </button>
+                                        <button type="button"
+                                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                                            style="background-color: whitesmoke; border: none;"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden"
+                                                style="color: #000; background-color: #000;">Toggle
+                                                Dropend</span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><button class="dropdown-item" type="button">Action</button></li>
+                                            <li><button class="dropdown-item" type="button">Another action</button></li>
+                                            <li><button class="dropdown-item" type="button">Something else here</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex;">
+                                    <h3 style="font-size: 17px; margin-top: 20px;">Thumnail </h3>
+                                    <h3 style="font-size: 17px; margin-top: 20px; margin-left: 3.6cm;">Thought Process
+                                    </h3>
+                                </div>
+
+                                <div>
+                                    <div class="btn-group dropend"
+                                        style="margin-top: 8px; background: #FCFBFB; box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.15);">
+                                        <button type="button" class="btn btn-secondary"
+                                            style="background-color: whitesmoke; color: black; border: none;">
+                                            --Select--
+                                        </button>
+                                        <button type="button"
+                                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                                            style="background-color: whitesmoke; border: none;"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden"
+                                                style="color: #000; background-color: #000;">Toggle
+                                                Dropend</span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><button class="dropdown-item" type="button">Action</button></li>
+                                            <li><button class="dropdown-item" type="button">Another action</button></li>
+                                            <li><button class="dropdown-item" type="button">Something else here</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group dropend"
+                                        style="margin-left: 2.4cm; margin-top: 8px; background: #FCFBFB;box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.15);">
+                                        <button type="button" class="btn btn-secondary"
+                                            style="background-color: whitesmoke; color: black; border: none;">
+                                            --Select--
+                                        </button>
+                                        <button type="button"
+                                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                                            style="background-color: whitesmoke; border: none;"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden"
+                                                style="color: #000; background-color: #000;">Toggle
+                                                Dropend</span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><button class="dropdown-item" type="button">Action</button></li>
+                                            <li><button class="dropdown-item" type="button">Another action</button></li>
+                                            <li><button class="dropdown-item" type="button">Something else here</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div style="margin-top: 20px; margin-left: 6cm;">
+                                        <button
+                                            style="border: none; border-radius: 10px; background-color: blue;color: white; height: 1cm; padding: 5px;">Save
+                                            draft</button>
+                                        <button
+                                            style="border: none; border-radius: 10px; background-color: blue;color: white; height: 1cm; padding: 5px;">Publish</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2nd asset -->
+                <div id="asset_container4">
+                    <div class="asset_container_in_upper4">
+                        <div
+                            style="color: white; font-size: .5cm; margin-top: 10px; margin-left: 4.4cm; margin-right: 1.5cm;">
+                            <b>4SA Method</b>
+                        </div>
+                        <i onclick="showinfo4()"><img
+                                style="width: 1cm; margin-left: 3px; background-color: white;cursor: pointer; border-radius: 20px; padding: 3px; width: .5cm; margin-top: 11px; margin-left: 1.5cm;"
+                                src="info.png"></i>
+                    </div>
+                    <div id="asset_container_in_mid4">
+                        <h3 class="Description_css"> <b>Description:</b> To explore more read more
+                        </h3>
+                    </div>
+                    <div class="asset_container_in_lower4">
+                        <div>
+                            <div>
+                                <div style="display: flex; background-color: #e8e8e8; padding: 3px;z-index: 0;">
+                                    <div><img onclick="hide_thread4()"
+                                            style=" cursor: pointer; margin-left: 15px; margin-bottom: 6px;"
+                                            src="down.svg"></div>
+                                    <h3 style="font-size: 17px; margin-left: 20px;">Intoduction </h3>
+                                </div>
+                                <div id="hide_thread4_lower">
+                                    <p>The 4SA Method, How to bring a idea into process?</p>
+                                </div>
+                            </div>
+                            <div style="position: relative;">
+                                <div style="display: flex; background-color: #e8e8e8; padding: 3px; z-index: 2;">
+                                    <div><img onclick="hide_thread4_2()"style=" cursor: pointer; margin-left: 15px; margin-bottom: 6px;"src="down.svg"></div>
+                                    <h3 style="font-size: 17px; margin-left: 20px;">Intoduction </h3>
+                                </div>
+                                <div id="hide_thread4_lower_2">
+                                    <p>The 4SA Method, How to bring a idea into process?</p>
+                                </div>
+                            </div>
+                            <div style="position: relative;">
+                                <div style="display: flex; background-color: #e8e8e8; padding: 3px; z-index: 2;">
+                                    <div><img onclick="hide_thread4_3()"style=" cursor: pointer; margin-left: 15px; margin-bottom: 6px;"src="down.svg"></div>
+                                    <h3 style="font-size: 17px; margin-left: 20px;">For more info... </h3>
+                                </div>
+                                <div id="hide_thread4_lower">
+                                    <p>for more info visite our offical website </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- last div for rigth sidebar and three icon -->
+        <div class="notice_board">
+            <!-- <div class="notice_board_in_ ">
+                <i class="cross_icon" onclick="close()"><img src="x.png"></i>
+                <h6 style="margin-top: 40px;" class="notice_words">N</h6>
+                <h6 class="notice_words">o</h6>
+                <h6 class="notice_words">t</h6>
+                <h6 class="notice_words">i</h6>
+                <h6 class="notice_words">c</h6>
+                <h6 class="notice_words">e</h6>
+                <h6 style="margin-top: 20px;" class="notice_words">B</h6>
+                <h6 class="notice_words">o</h6>
+                <h6 class="notice_words">a</h6>
+                <h6 class="notice_words">r</h6>
+                <h6 class="notice_words">d</h6>
+            </div> -->
+            <div id="notice_board_2">
+                <div class="notice_board_in">
+                    <i onclick="openbar()" id="cross_icon"><img id="cross" src="x.png"></i>
+                    <h6 style="margin-top: 40px;" class="notice_words">N</h6>
+                    <h6 class="notice_words">o</h6>
+                    <h6 class="notice_words">t</h6>
+                    <h6 class="notice_words">i</h6>
+                    <h6 class="notice_words">c</h6>
+                    <h6 class="notice_words">e</h6>
+                    <h6 style="margin-top: 20px;" class="notice_words">B</h6>
+                    <h6 class="notice_words">o</h6>
+                    <h6 class="notice_words">a</h6>
+                    <h6 class="notice_words">r</h6>
+                    <h6 class="notice_words">d</h6>
+                </div>
+            </div>
+            <div class="lower_icon">
+                <i class="lower_icon_"><img class="imgicon" src="1.png"></i>
+                <i class="lower_icon_"><img class="imgicon" src="2.png"></i>
+                <i class="lower_icon_"><img class="imgicon" src="3.png"></i>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

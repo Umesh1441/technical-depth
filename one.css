@@ -1,0 +1,31 @@
+.navbar {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .website-name {
+    color: blue;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .home-icon {
+    margin-right: 10px;
+  }
+  
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
